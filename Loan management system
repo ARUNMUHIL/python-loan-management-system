@@ -1,0 +1,36 @@
+position = input("student/worker/gov.job: ")
+if position == "student":
+    print("loan type")
+    loan = input("studyloan/skill_dev/startup:")
+    if loan == "studyloan" or loan == "skill_dev" or loan == "startup":
+        name = input("Enter your name: ")
+        date_of_birth = input("enter your date of birth: ")
+        age = int(input("Enter your age: "))
+        father_name = input("Enter your father name: ")
+        father_DOB = input("enter your father DOB: ")
+        mother_name = input("enter your mother name: ")
+        mother_DOB = input("enter your mother DOB: ")
+        print("\n>> enter your address <<")
+        home_pin = int(input("enter your home pin: "))
+        street_name = input("enter your street name: ")
+        native_name = input("enter your native name: ")
+        district = input("enter your district name: ")
+        district_pin = int(input("enter your district pin: "))
+        amount = int(input("enter how much amount you need: "))
+        
+        if amount <= 400000:
+            print("\n Your loan has been approved")
+            print("Mr/Ms.", name)
+            print("Age:", age)
+            print("Father name:", father_name)
+            print("Mother name:", mother_name)
+            print("Address:", home_pin, street_name, native_name, district, district_pin)
+        else:
+            print("Reach maximum limit (Limit: 400000)")
+    else:
+        print("Invalid loan type selected")
+        
+elif position == "worker" or position == "gov.job":
+    print("Process for worker/gov.job is under development.")
+else:
+    print("Invalid position")
